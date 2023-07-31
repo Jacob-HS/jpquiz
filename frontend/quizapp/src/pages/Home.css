@@ -1,0 +1,47 @@
+body{
+  background-color: rgb(73, 0, 230);
+}
+
+#homeHeader{
+  text-align: center;
+  color: white;
+  font-size: 4.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+#homeHeaderContainer{
+  height: 17vh;
+  border-bottom: 1px solid white;
+  overflow:hidden;
+}
+
+#quizContainer{
+  height: 80vh;
+  width: 70vw;
+  margin: auto;
+  background-color: rgb(247, 242, 242);
+  border-radius: 5vw;
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.quizButton{
+  background-color: white;
+  box-shadow: 0 0 5px 5px black;
+  width: 20vw;
+  height: 10vh;
+  margin: 5vh 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3vh;
+}
+
+.quizButtonText{
+  margin: 0;
+  font-size: 2em
+}
+
