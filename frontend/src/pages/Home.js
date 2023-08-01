@@ -10,7 +10,7 @@ export default function Home(props){
       <p id="homeHeader">JP Quiz</p>
     </div>
     <div id="quizContainer">
-      <Link to="/m" style={{textDecoration: "none", color : "black"}}>
+      <Link to="/about/goiryoku" style={{textDecoration: "none", color : "black"}}>
         <div className="quizButton" onClick={()=>props.retrieveQuizInfo("goiryoku")}>
           <p className="quizButtonText">Goiryoku</p>
         </div>
