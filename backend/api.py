@@ -7,17 +7,17 @@ CORS(app)
 
 with open("goiryokuQuestions.json", "r", encoding="utf-8") as infile:
     goiryokuQuestions=json.load(infile)
+with open("quizList.json", "r", encoding="utf-8") as infile:
+    quizList=json.load(infile)
+print(quizList)
 
-print("fuck")
-@app.route('/test')
-def testboi():
-    return {"hello": 123}
+@app.route('/quizList')
+def quizListBoi():
+    return jsonify(quizList)
 
 @app.route('/quizData/<quizId>')
 def fetchQuizData(quizId):
     if (quizId=="goiryoku"):
-        print(goiryokuQuestions)
-
         return jsonify(goiryokuQuestions)
     else:
         print("error")

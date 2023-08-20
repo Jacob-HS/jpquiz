@@ -11,10 +11,12 @@ import axios from 'axios'
 axios.defaults.baseURL = 'http://127.0.0.1:5000/';
 export default function App() {
   const [quizData, updateQuizData] = useState("");
+  const [quizAbout, updateQuizAbout] = useState("");
   useEffect(()=>{
-    axios.get('/test')
+    axios.get('/quizList')
     .then(res=>{
-      console.log(res.data);
+      updateQuizAbout((r)=>res.data);
+      console.log(quizAbout);
     });
   },[]);
   useEffect(() => {console.log(quizData);}, [quizData]);
@@ -23,15 +25,14 @@ export default function App() {
     .then(res=>{
       updateQuizData((r)=>res.data);
     });
-    console.log("???")
   }
-
+  
   
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home retrieveQuizInfo={retrieveQuizInfo} />}></Route>
-        <Route path="/about/goiryoku" element={<GoiryokuAbout/>}></Route>
+        <Route path="/about/goiryoku" element={<GoiryokuAbout about={quizAbout}/>}></Route>
       </Routes>
     </BrowserRouter>
   );
