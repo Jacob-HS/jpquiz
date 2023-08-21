@@ -1,0 +1,16 @@
+.multChoiceAnswer{
+  background-color: rgb(255, 254, 254);
+  color: black;
+  font-size: 9vh;
+  text-align: center;
+  border-radius: 2vw;
+  width: 40vw;
+  height: 13vh;
+  margin-bottom: 3vh;
+}
+
+#answerContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
