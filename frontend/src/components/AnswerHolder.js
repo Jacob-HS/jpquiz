@@ -18,6 +18,9 @@ export default function AnswerHolder(props){
   return (<>
   <div id="answerContainer">
    {renderAnswers(shuffledAnswers)}
+   {props.includeIdk &&
+   <div className="multChoiceAnswer idk" key="idk" onClick={()=>props.registerAnswer("idk")}>I don't know</div>
+   }
   </div>
   </>);
 }
