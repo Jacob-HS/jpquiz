@@ -19,17 +19,11 @@ export default function GoiryokuAbout(props){
       <p id="titleHeader">{QUIZINFO.name}</p>
       <p id="aboutHeader">About</p>
       <p id="aboutContent">{QUIZINFO.about}</p>
-      <p id="adaptiveDescription">Since Goiryoku is an adaptive test, we have the option to ballpark you current vocab level before starting.
-      This will lower the time it takes to get to questions at your level. So, how many words do you think you know? </p>
+      <p id="adaptiveDescription">Selecting a wrong answer is heavily penalized. If you are unsure of the answer, it is best to
+      select the "I don't know" option to avoid </p>
       <div id="adaptiveLevelBox">
       <Link to="/quiz/goiryoku" style={{textDecoration: "none", color : "black"}}>
-        <div className="adaptiveButton" onClick={()=>props.setAdaptiveLevel(0)}>&lt;2000<br/>N5~N4</div>
-      </Link>
-      <Link to="/quiz/goiryoku" style={{textDecoration: "none", color : "black"}}>
-        <div className="adaptiveButton" onClick={()=>props.setAdaptiveLevel(1)}>2000-6000<br/>N3~N2</div>
-      </Link>
-      <Link to="/quiz/goiryoku" style={{textDecoration: "none", color : "black"}}>
-        <div className="adaptiveButton" onClick={()=>props.setAdaptiveLevel(2)}>&gt;6000<br/>N1+</div>
+        <div className="adaptiveButton" onClick={()=>props.setAdaptiveLevel(0)}>Let's do it</div>
       </Link>
       </div>
     </div>
