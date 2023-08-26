@@ -36,8 +36,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home retrieveQuizInfo={retrieveQuizInfo} />}></Route>
-        <Route path="/about/goiryoku" element={<GoiryokuAbout about={quizAbout} setAdaptiveLevel={setAdaptiveLevel}/>}></Route>
-        <Route path="/quiz/goiryoku" element={<GoiryokuQuiz adaptiveLevel={adaptiveLevel} quizData={quizData}/>}></Route>
+        <Route path="/about/goiryoku" element={<GoiryokuAbout about={quizAbout} setAdaptiveLevel={setAdaptiveLevel} quizData={quizData} quizID="goiryoku"/>}></Route>
+        <Route path="/quiz/goiryoku" element={<GoiryokuQuiz adaptiveLevel={adaptiveLevel} quizData={quizData} quizID="goiryoku"/>}></Route>
       </Routes>
     </BrowserRouter>
   );

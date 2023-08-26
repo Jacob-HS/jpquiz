@@ -1,6 +1,7 @@
 import "./GoiryokuQuiz.css"
 import QuestionHolder from "../components/QuestionHolder.js"
 import AnswerHolder from "../components/AnswerHolder.js"
+import GoiryokuResults from "../components/GoiryokuResults.js"
 import { useState, useEffect } from 'react'
 import { useNavigate } from "react-router-dom"
 
@@ -8,12 +9,13 @@ export default function GoiryokuQuiz(props){
   const [currDan, updateCurrDan] = useState(props.adaptiveLevel);
   const [quizHistory, quizHistoryUpdater] = useState([[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]]) //number of correct,incorrect per dan
   const [questionTracker, questionTrackerUpdater] = useState([0,0,0,0,0,0,0]);
+  const [finished, finishedUpdater] = useState(false);
   const navigate = useNavigate();
   useEffect(()=>{
-    if((props.about)==''){
+    if((props.quizData)==''){
       navigate('/');
   }}, []);  
-  if ((props.about)==''){
+  if ((props.quizData)==''){
     return (<></>);
   }
  
@@ -39,7 +41,8 @@ export default function GoiryokuQuiz(props){
       temp[currDan][1]++;
     }else{
       console.log("you got it wrong!");
-      temp[currDan][1]+=1.5;
+      temp[currDan][1]+=1;
+      temp[currDan][0]-=.33;
       quizHistoryUpdater( prev => temp)
     }
     let currDanQuestionCount=questionTracker[currDan];
@@ -49,7 +52,7 @@ export default function GoiryokuQuiz(props){
 
     //no dan updating until 5 questions answered. 15 questions on the same dan and you're done. 
     if (currDanQuestionCount<4) return;
-    if (currDanQuestionCount>13) console.log("you're done with the quiz");
+    if (currDanQuestionCount>13) finishedUpdater(prev=>true);
     if (correctPercent > (84 - Math.min(currDanQuestionCount,10)) && currDan<6){
       updateCurrDan(c=>c+1);
       return;
@@ -60,11 +63,16 @@ export default function GoiryokuQuiz(props){
 
   }
     console.log(currQuestion);
+    if (finished){
+      return (<>
+        <GoiryokuResults quizHistory={quizHistory} questionTracker={questionTracker}/>
+      </>);
+    }else{
     return (<>
       <p id="instructionHeader">Select the English word which most closely fits the Japanese.</p>
       <QuestionHolder question={currQuestion[0]} questionStyle="single"/>
       <AnswerHolder answerList={currQuestion.slice(1)} registerAnswer={registerAnswer} includeIdk="1"/>
     </>);
-  
+    }
   
 }

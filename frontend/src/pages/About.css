@@ -42,3 +42,8 @@
   width: 17vw;
   text-align: center;
 }
+#loadingPlaceholder{
+  font-size: 5em;
+  text-align: center;
+  padding-bottom: 4vh;
+}
