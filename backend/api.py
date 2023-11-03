@@ -9,7 +9,7 @@ import os
 
 db=SQLAlchemy()
 DB_NAME="jpquiz.db"
-app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
+app = Flask(__name__, static_folder="frontend/build", static_url_path="/")
 CORS(app)
 app.config['SECRET_KEY'] = "frick"
 app.config["SQLALCHEMY_DATABASE_URI"]="postgresql://nwjvfrtkyviply:12674594f6cac5865af202d24e918f1e9f41a8662043355c932921c1180333a2@ec2-52-6-117-96.compute-1.amazonaws.com:5432/d4aa6667vpdng7"
