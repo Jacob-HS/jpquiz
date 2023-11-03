@@ -1,0 +1,48 @@
+#summaryAreaContainer{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+.singleSummaryElement{
+  background-color: rgb(180, 180, 180);
+  border-radius: 1vw;
+  margin: 4vh 2.5vw 1vh 2.5vw;
+  width:30vw;
+}
+
+.sentenceSummaryElement{
+  width:60vw;
+  background-color: rgb(180, 180, 180);
+  border-radius: 1vw;
+  margin: 4vh 2.5vw 1vh 2.5vw;
+}
+.correct{
+  background-color: rgb(159, 247, 159);
+}
+.incorrect{
+  background-color: rgb(252, 117, 117);
+}
+
+.summaryQuestion{
+  font-size: 2em;
+  margin: 1vh 0 0 1vw;
+}
+
+.summaryAns{
+  font-size: 1.5em;
+  margin: 1vh 0vw 0 1vw;
+}
+
+.summaryAns:last-child{
+  margin-bottom: 3vh;
+}
+
+#summaryHeader{
+  font-size: 4em;
+  text-align: center;
+  margin: 0 15vw 1vh 15vw;
+  border-bottom: 2px solid black;
+  
+}

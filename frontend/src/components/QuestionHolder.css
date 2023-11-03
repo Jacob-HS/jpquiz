@@ -1,6 +1,67 @@
-#singleQuestion{
-  color:white;
-  font-size: 4em;
+.singleQuestion{
+  color:rgb(49, 49, 49);
+  font-size: 10vh;
+  font-weight: bold;
   text-align: center;
-  margin: 5vh 0 5vh 0;
+  margin: 0 0 5vh 0;
+}
+.sentenceQuestion{
+  color:rgb(49, 49, 49);
+  font-weight: bold;
+  font-size: 7vh;
+  text-align: center;
+  margin: 0 0 0vh 0;
+}
+
+.highlightedPortion{
+  border-bottom: 2px solid rgb(0, 125, 208);
+  color: rgb(0, 125, 208);
+}
+
+#instructionHeader{
+  text-align: center;
+  font-size: 3vh;
+  margin-top:0;
+  margin-bottom: 1vh;
+  padding-bottom:0vh;
+  padding-top:2vh;
+  color: rgb(0, 0, 0);
+}
+
+#underlineBoi{
+  border-bottom: 1px solid black;
+}
+
+#questionContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18vh;
+}
+
+.answerArea{
+  height:25vh;
+  background-color: white;
+  box-shadow: 0 0 2vw 1vh;
+}
+
+.questionNumHeader{
+  margin: 0 0 0 0;
+  position: absolute;
+  padding: 0vh 0vw 1vh 1vw;
+  color: white;
+  width: 17vw;
+  background-color: rgb(88, 88, 88);
+  border-bottom-right-radius: 1vw;
+  font-weight:600;
+  font-size: 2.5vw;
+}
+
+svg{
+  width: 15vh;
+  height: 15vh;
+}
+
+.smallBoi{
+  font-size: 5vh;
 }

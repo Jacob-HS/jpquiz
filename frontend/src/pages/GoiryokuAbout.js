@@ -7,20 +7,22 @@ export default function GoiryokuAbout(props){
   
   const navigate = useNavigate();
   useEffect(()=>{
-    if((props.about)==''){
+    if((props.quizID)==''){
       navigate('/');
   }}, []);  
-  if ((props.about)==''){      
+  if ((props.quizID)==''){      
     return (<></>);
   }
-  let QUIZINFO=props.about.goiryoku;
-//
-  if (props.quizData.quizName === props.quizID){
+  let QUIZINFO=props.quizData;
+  console.log(props.quizData.quizID);
+  console.log(props.quizID);
+
+  if (QUIZINFO.quizID === props.quizID){
     return (<>
       <div id="backPanel">
-        <p id="titleHeader">{QUIZINFO.name}</p>
+        <p id="titleHeader">{QUIZINFO.quizName}</p>
         <p id="aboutHeader">About</p>
-        <p id="aboutContent">{QUIZINFO.about}</p>
+        <p id="aboutContent">{QUIZINFO.quizAbout}</p>
         <p id="adaptiveDescription">Selecting a wrong answer is heavily penalized. If you are unsure of the answer, it is best to
         select the "I don't know" option to avoid the score penalty.</p>
         <div id="adaptiveLevelBox">

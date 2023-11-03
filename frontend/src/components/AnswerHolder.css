@@ -1,21 +1,44 @@
 .multChoiceAnswer{
   background-color: rgb(255, 254, 254);
   color: black;
-  font-size: 9vh;
+  font-size: 7vh;
   text-align: center;
   border-radius: 2vw;
-  width: 40vw;
-  height: 13vh;
+  width: 35vw;
+  height: 10vh;
   margin-bottom: 3vh;
+  box-shadow: 0px 0px 1vw .25vh rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 #answerContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 75vh;
+  
 }
 
 .idk{
   background-color: red;
   color: white;
+}
+
+.freeAnswer{
+    margin-bottom: 10vh;
+    width: 35vw;
+    border-radius: 2vh;
+    height: 10vh;
+    text-align: center;
+    border: none;
+    background-color:rgba(255, 255, 255, 0.308);
+    color: white;
+    font-size: 7vh;
+    box-shadow: 0px 0px 1vw .5vh white;
+}
+
+.freeAnswer:focus{
+  outline:none;
+
 }
