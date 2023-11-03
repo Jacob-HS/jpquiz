@@ -20,7 +20,7 @@ AnswerTracker= db.Table("answertracker",
                         db.Column("incorrectcount", db.Integer, server_default=text("0"))
                         )
 
-  
+print(os.listdir())
 with open("goiryokuQuestions.json", "r", encoding="utf-8") as infile:
     goiryokuQuestions=json.load(infile)
 with open("quizList.json", "r", encoding="utf-8") as infile:
