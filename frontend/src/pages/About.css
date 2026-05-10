@@ -4,6 +4,7 @@
   width: 70vw;
   margin: auto;
   margin-top: 5vh;
+  box-shadow: 3px 3px 20px 1px;
 }
 
 #titleHeader{

@@ -6,7 +6,8 @@
 @-webkit-keyframes flip-out-hor-top{0%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}100%{-webkit-transform:rotateX(70deg);transform:rotateX(70deg);opacity:0}}@keyframes flip-out-hor-top{0%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}100%{-webkit-transform:rotateX(70deg);transform:rotateX(70deg);opacity:0}}
 
 html{
-  background-image: linear-gradient(0deg, #11002f 0%, #2f0080 35%, #5100d3 100%);
+  background: #d324ff;
+  background: linear-gradient(125deg,rgba(211, 36, 255, 1) 0%, rgba(64, 226, 255, 1) 50%, rgba(252, 69, 231, 1) 100%);
   min-height: 100%;
 }
 
@@ -14,6 +15,9 @@ html{
   text-align: center;
   color: white;
   font-size: 4.5em;
+  padding-top: 2vh;
+  text-shadow: .5vh .5vh 0 BLACK;
+
   margin: 0;
   font-weight: bold;
 }
@@ -26,7 +30,7 @@ html{
 #headerContainer{
   width: 100%;
   display: flex;
-  height: 15vh;
+  height: 12vh;
 }
 
 #quizContainer{
@@ -39,6 +43,7 @@ html{
   align-items:stretch;
   flex-wrap: wrap;
   justify-content: center;
+  box-shadow: 3px 3px 20px 1px;
 }
 
 .quizHalf{
@@ -46,13 +51,14 @@ html{
   text-align: center;
   overflow-y: auto;
   height:65vh;
+  padding-top:3vh;
 }
 
 .quizHalfHeader{
   text-align: center;
   font-size: 3em;
   width: 40%;
-  margin: 1vh auto 5vh auto;
+  margin: 1vh auto 2vh auto;
   font-weight: 500;
   color: rgb(93, 103, 129);
   border-bottom: 2px solid rgb(93, 103, 129);
@@ -67,14 +73,14 @@ html{
   justify-content: center;
   align-items: center;
   animation-name: flip-out-hor-top;
-  border-radius: 5vw;
+  border-radius: 1vw;
   transition: background-color,box-shadow 300ms;
 }
 .quizButtonText{
   margin: 0;
   font-size: 3em;
   font-weight: 500;
-  color: rgb(147, 147, 255);
+  color: rgb(0, 0, 0);
 }
 
 .quizButtonText:hover{
@@ -84,13 +90,13 @@ html{
 .quizButton:hover{
   background-color: rgb(247, 242, 242);
 
-  box-shadow: 0 0 5vh 1vh rgb(184, 184, 184) inset;
+  box-shadow: 0 0 2vh .5vh rgb(0, 0, 0);
 }
 
 .quizSpacer{
   width: 25vw;
   height: 1px;
   margin: 0 auto;
-  border-bottom: 3px solid rgb(147, 147, 255);
+  border-bottom: 3px solid rgb(0, 0, 0);
 }
 
