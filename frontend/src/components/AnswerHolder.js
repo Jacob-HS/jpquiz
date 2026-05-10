@@ -46,7 +46,7 @@ export default function AnswerHolder(props){
 
   return (<>
   <div id="answerContainer">
-  {props.answerType==="multChoice" && renderAnswers(shuffledAnswers)};
+  {props.answerType==="multChoice" && renderAnswers(shuffledAnswers)}
   {props.answerType==="free" && <input className="freeAnswer" type="text" id="freeAnswer" name="answer" placeholder="答え" autoComplete="off"></input>}
   {props.includeIdk === "yes" &&
    <div className="multChoiceAnswer idk" key="idk" onClick={()=>props.registerAnswer("idk")}>I don't know</div>
