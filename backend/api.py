@@ -13,7 +13,7 @@ DB_NAME="jpquiz.db"
 app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
 CORS(app)
 app.config['SECRET_KEY'] = "frick"
-app.config["SQLALCHEMY_DATABASE_URI"]=os.environ.get("DATABASE_URL")
+app.config["SQLALCHEMY_DATABASE_URI"]=os.environ.get("NEW_DB_URI")
 db.init_app(app)
 AnswerTracker= db.Table("answertracker", 
                         db.Column("questionid", db.String(100), primary_key=True),
